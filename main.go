@@ -222,9 +222,9 @@ func doMain() error {
 	log.Printf("VNC / remote desktop / screen sharing setup ...")
 	if configs.PasswordToSet != "" {
 		log.Printf("Change user password...")
-		if err := ChangeUserPassword(configs.PasswordToSet); err != nil {
-			return errors.Wrap(err, "Can't change user password")
-		}
+		// if err := ChangeUserPassword(configs.PasswordToSet); err != nil {
+		// 	return errors.Wrap(err, "Can't change user password")
+		// }
 
 		log.Printf("Enable remote desktop...")
 		if err := EnableRemoteDesktop(configs.PasswordToSet); err != nil {
